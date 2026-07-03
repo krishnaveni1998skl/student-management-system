@@ -1,44 +1,46 @@
 import {
   ResponsiveContainer,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
+  PieChart,
+  Pie,
   Tooltip,
+  Cell,
+  Legend,
 } from "recharts";
 
-const data = [
-  { month: "Jan", students: 120 },
-  { month: "Feb", students: 140 },
-  { month: "Mar", students: 170 },
-  { month: "Apr", students: 190 },
-  { month: "May", students: 210 },
-  { month: "Jun", students: 250 },
-];
+function StudentChart({ students = [] }) {
+  const active = students.filter((s) => s.status === "Active").length;
+  const inactive = students.filter((s) => s.status === "Inactive").length;
+  const depCount = new Set(students.map((s) => s.department)).size;
 
-function StudentChart() {
+  const data = [
+    { name: "Active", value: active },
+    { name: "Inactive", value: inactive },
+    { name: "Departments", value: depCount },
+  ];
+
+  const COLORS = ["#22c55e", "#ef4444", "#3b82f6"];
+
   return (
     <div className="bg-white rounded-xl shadow-md p-6">
-      <h2 className="text-xl font-semibold mb-5">Student Growth</h2>
+      <h2 className="text-xl font-semibold mb-5">Student Overview</h2>
 
       <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-
-          <XAxis dataKey="month" />
-
-          <YAxis />
+        <PieChart>
+          <Pie
+            data={data}
+            dataKey="value"
+            nameKey="name"
+            outerRadius={110}
+            label
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index]} />
+            ))}
+          </Pie>
 
           <Tooltip />
-
-          <Line
-            type="monotone"
-            dataKey="students"
-            stroke="#2563EB"
-            strokeWidth={3}
-          />
-        </LineChart>
+          <Legend />
+        </PieChart>
       </ResponsiveContainer>
     </div>
   );

@@ -7,7 +7,7 @@ import {
   FaUser,
   FaSignOutAlt,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const menuItems = [
   { name: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt /> },
@@ -19,6 +19,12 @@ const menuItems = [
 ];
 
 function Sidebar() {
+    const navigate = useNavigate();
+
+const handleLogout = () => {
+  localStorage.removeItem("isLoggedIn");
+  navigate("/");
+};
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 bg-blue-900 text-white shadow-lg">
       {/* Logo */}
@@ -49,7 +55,10 @@ function Sidebar() {
 
       {/* Logout */}
       <div className="absolute bottom-0 w-full border-t border-blue-700 p-4">
-        <button className="flex w-full items-center gap-3 rounded-lg px-4 py-3 hover:bg-red-600 transition">
+        <button
+          onClick={handleLogout}
+          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 hover:bg-red-600 transition"
+        >
           <FaSignOutAlt />
           Logout
         </button>

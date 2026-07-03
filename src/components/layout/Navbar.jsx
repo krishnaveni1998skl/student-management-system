@@ -1,5 +1,5 @@
 import { FaBell, FaUserCircle } from "react-icons/fa";
-
+import ProfileMenu from "./ProfileMenu";
 function Navbar() {
   return (
     <header className="h-16 bg-white shadow-sm border-b flex items-center justify-between px-8 ml-64">
@@ -20,13 +20,7 @@ function Navbar() {
           </span>
         </button>
 
-        <div className="flex items-center gap-3">
-          <FaUserCircle className="text-4xl text-blue-700" />
-          <div>
-            <h3 className="font-semibold text-gray-800">Administrator</h3>
-            <p className="text-sm text-gray-500">Admin Panel</p>
-          </div>
-        </div>
+        <ProfileMenu />
       </div>
     </header>
   );

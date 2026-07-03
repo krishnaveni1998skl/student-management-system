@@ -1,0 +1,43 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "studentId": "ST001",
+      "name": "Rahul Kumar",
+      "email": "rahul@gmail.com",
+      "phone": "9876543210",
+      "gender": "Male",
+      "dob": "2003-05-15",
+      "department": "Computer Science",
+      "year": "III Year",
+      "address": "Chennai",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "studentId": "ST002",
+      "name": "Priya",
+      "email": "priya@gmail.com",
+      "phone": "9876543211",
+      "gender": "Female",
+      "dob": "2004-01-20",
+      "department": "Information Technology",
+      "year": "II Year",
+      "address": "Coimbatore",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "studentId": "ST003",
+      "name": "Arun",
+      "email": "arun@gmail.com",
+      "phone": "9876543212",
+      "gender": "Male",
+      "dob": "2002-11-08",
+      "department": "Mechanical",
+      "year": "IV Year",
+      "address": "Madurai",
+      "status": "Inactive"
+    }
+  ]
+}
