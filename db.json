@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "studentId": "ST001",
       "name": "Rahul Kumar",
       "email": "rahul@gmail.com",
@@ -14,7 +14,7 @@
       "status": "Active"
     },
     {
-      "id": 2,
+      "id": "2",
       "studentId": "ST002",
       "name": "Priya",
       "email": "priya@gmail.com",
@@ -27,7 +27,7 @@
       "status": "Active"
     },
     {
-      "id": 3,
+      "id": "3",
       "studentId": "ST003",
       "name": "Arun",
       "email": "arun@gmail.com",
@@ -39,5 +39,52 @@
       "address": "Madurai",
       "status": "Inactive"
     }
-  ]
+  ],
+  "attendance": [
+    {
+      "id": "1",
+      "studentId": "ST001",
+      "name": "Rahul Kumar",
+      "department": "Computer Science",
+      "date": "2026-07-04",
+      "status": "Present"
+    },
+    {
+      "id": "2",
+      "studentId": "ST002",
+      "name": "Priya",
+      "department": "Information Technology",
+      "date": "2026-07-04",
+      "status": "Absent"
+    },
+    {
+      "id": "3",
+      "studentId": "ST003",
+      "name": "Arun",
+      "department": "Mechanical",
+      "date": "2026-07-04",
+      "status": "Present"
+    }
+  ],
+  "progress": [
+    {
+      "id": "2",
+      "studentId": "ST002",
+      "name": "Priya",
+      "subject": "Java",
+      "semester": "Semester 1",
+      "marks": 76,
+      "grade": "B"
+    },
+    {
+      "id": "3",
+      "studentId": "ST003",
+      "name": "Arun",
+      "subject": "Database",
+      "semester": "Semester 1",
+      "marks": 92,
+      "grade": "A+"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
