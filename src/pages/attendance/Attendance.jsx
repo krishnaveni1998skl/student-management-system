@@ -2,21 +2,18 @@ import { useEffect, useState } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import AttendanceToolbar from "../../components/attendance/AttendanceToolbar";
 import AttendanceTable from "../../components/attendance/AttendanceTable";
-
+import Pagination from "../../components/common/Pagination";
 import { getAttendance, deleteAttendance } from "../../services/api";
+
 function Attendance() {
   const [attendance, setAttendance] = useState([]);
-const [searchTerm, setSearchTerm] = useState("");
-const [status, setStatus] = useState("");
-const filteredAttendance = attendance.filter((item) => {
-  const matchSearch =
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.studentId.toLowerCase().includes(searchTerm.toLowerCase());
+  const [searchTerm, setSearchTerm] = useState("");
+  const [status, setStatus] = useState("");
 
-  const matchStatus = status ? item.status === status : true;
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 5;
 
-  return matchSearch && matchStatus;
-});
   useEffect(() => {
     loadAttendance();
   }, []);
@@ -29,21 +26,43 @@ const filteredAttendance = attendance.filter((item) => {
       console.error(error);
     }
   };
-const handleDelete = async (id) => {
-  const confirmDelete = window.confirm(
-    "Are you sure you want to delete this attendance record?",
+
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this attendance record?",
+    );
+
+    if (!confirmDelete) return;
+
+    try {
+      await deleteAttendance(id);
+      loadAttendance();
+    } catch (error) {
+      console.error(error);
+      alert("Failed to delete attendance.");
+    }
+  };
+
+  // Search + Filter
+  const filteredAttendance = attendance.filter((item) => {
+    const matchSearch =
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.studentId.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchStatus = status ? item.status === status : true;
+
+    return matchSearch && matchStatus;
+  });
+
+  // Pagination Logic
+  const indexOfLastRecord = currentPage * recordsPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+
+  const currentAttendance = filteredAttendance.slice(
+    indexOfFirstRecord,
+    indexOfLastRecord,
   );
 
-  if (!confirmDelete) return;
-
-  try {
-    await deleteAttendance(id);
-    loadAttendance();
-  } catch (error) {
-    console.error(error);
-    alert("Failed to delete attendance.");
-  }
-};
   return (
     <MainLayout>
       <div className="space-y-6">
@@ -65,8 +84,15 @@ const handleDelete = async (id) => {
         />
 
         <AttendanceTable
-          attendance={filteredAttendance}
+          attendance={currentAttendance}
           onDelete={handleDelete}
+        />
+
+        <Pagination
+          currentPage={currentPage}
+          totalItems={filteredAttendance.length}
+          itemsPerPage={recordsPerPage}
+          onPageChange={setCurrentPage}
         />
       </div>
     </MainLayout>

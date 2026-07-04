@@ -4,7 +4,7 @@ import ReportStats from "../../components/reports/ReportStats";
 import AttendanceChart from "../../components/reports/AttendanceChart";
 import ExportButtons from "../../components/reports/ExportButtons";
 import { getStudents, getAttendance } from "../../services/api";
-
+import DepartmentChart from "../../components/reports/DepartmentChart";
 function Reports() {
   const [students, setStudents] = useState([]);
   const [attendance, setAttendance] = useState([]);
@@ -38,9 +38,9 @@ function Reports() {
 
         {/* Pie Chart */}
         <AttendanceChart attendance={attendance} />
-
+        <DepartmentChart students={students} />
         {/* Export Buttons */}
-        <ExportButtons students={students} attendance={attendance} />
+        <ExportButtons />
       </div>
     </MainLayout>
   );

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import StudentToolbar from "../../components/students/StudentToolbar";
 import StudentTable from "../../components/students/StudentTable";
-import Pagination from "../../components/students/Pagination";
+import Pagination from "../../components/common/Pagination";
 import { getStudents } from "../../services/api";
 
 function StudentList() {

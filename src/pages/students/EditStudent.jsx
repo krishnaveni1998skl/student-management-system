@@ -27,8 +27,8 @@ function EditStudent() {
 
   const loadStudent = async () => {
     try {
-      const response = await getStudent(id);
-      setFormData(response.data);
+      const res = await getStudent(id);
+      setFormData(res.data);
     } catch (error) {
       console.error("Error loading student:", error);
     }
@@ -44,12 +44,47 @@ function EditStudent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Required validation
+    if (
+      !formData.studentId.trim() ||
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.gender ||
+      !formData.dob ||
+      !formData.department ||
+      !formData.year ||
+      !formData.address.trim()
+    ) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    // Name validation
+    if (!/^[A-Za-z ]+$/.test(formData.name)) {
+      alert("Name should contain only letters.");
+      return;
+    }
+
+    // Email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Phone validation
+    if (!/^[0-9]{10}$/.test(formData.phone)) {
+      alert("Phone number must be exactly 10 digits.");
+      return;
+    }
+
     try {
       await updateStudent(id, formData);
       alert("Student Updated Successfully");
       navigate("/students");
     } catch (error) {
       console.error("Error updating student:", error);
+      alert("Failed to update student.");
     }
   };
 
@@ -59,7 +94,7 @@ function EditStudent() {
         <div>
           <h1 className="text-3xl font-bold text-gray-800">Edit Student</h1>
 
-          <p className="text-gray-500 mt-2">Update student information.</p>
+          <p className="text-gray-500 mt-2">Update student details.</p>
         </div>
 
         <StudentForm

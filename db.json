@@ -38,6 +38,19 @@
       "year": "IV Year",
       "address": "Madurai",
       "status": "Inactive"
+    },
+    {
+      "studentId": "ST004",
+      "name": "Renu",
+      "email": "renu@gmail.com",
+      "phone": "9876540001",
+      "gender": "Female",
+      "dob": "1999-05-02",
+      "department": "Computer Science",
+      "year": "IV Year",
+      "address": "banglore",
+      "status": "Active",
+      "id": "_SQiPUjy_VM"
     }
   ],
   "attendance": [

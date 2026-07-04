@@ -15,6 +15,8 @@ import Progress from "./pages/progress/Progress";
 import AddProgress from "./pages/progress/AddProgress";
 import EditProgress from "./pages/progress/EditProgress";
 import ViewProgress from "./pages/progress/ViewProgress";
+import Profile from "./pages/profile/Profile";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <BrowserRouter>
@@ -137,6 +139,15 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

@@ -15,7 +15,6 @@ function Pagination({ currentPage, setCurrentPage, totalItems, itemsPerPage }) {
 
   return (
     <div className="flex items-center justify-center gap-3 mt-6">
-      {/* Prev */}
       <button
         onClick={goToPrev}
         disabled={currentPage === 1}
@@ -24,12 +23,10 @@ function Pagination({ currentPage, setCurrentPage, totalItems, itemsPerPage }) {
         Prev
       </button>
 
-      {/* Page Info */}
-      <span className="px-3 py-1">
+      <span>
         Page {currentPage} of {totalPages}
       </span>
 
-      {/* Next */}
       <button
         onClick={goToNext}
         disabled={currentPage === totalPages}
