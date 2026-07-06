@@ -12,7 +12,9 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (email === "admin@gmail.com" && password === "Admin@123") {
+    const savedPassword = localStorage.getItem("password") || "Admin@123";
+
+    if (email === "admin@gmail.com" && password === savedPassword) {
       localStorage.setItem("isLoggedIn", "true");
       navigate("/dashboard");
     } else {

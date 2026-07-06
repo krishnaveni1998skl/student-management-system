@@ -10,6 +10,10 @@ function StudentToolbar({
   setYear,
   status,
   setStatus,
+  sortBy,
+  setSortBy,
+  sortOrder,
+  setSortOrder,
 }) {
   const navigate = useNavigate();
 
@@ -61,6 +65,28 @@ function StudentToolbar({
           <option value="">All Status</option>
           <option value="Active">Active</option>
           <option value="Inactive">Inactive</option>
+        </select>
+        {/* Sort By */}
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="border rounded-lg p-2"
+        >
+          <option value="">Sort By</option>
+          <option value="studentId">Student ID</option>
+          <option value="name">Student Name</option>
+          <option value="department">Department</option>
+          <option value="year">Academic Year</option>
+        </select>
+
+        {/* Sort Order */}
+        <select
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value)}
+          className="border rounded-lg p-2"
+        >
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
         </select>
       </div>
       <button

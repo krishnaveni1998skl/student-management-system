@@ -14,22 +14,35 @@ function ChangePassword() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ const handleSubmit = (e) => {
+   e.preventDefault();
 
-    if (passwords.newPassword !== passwords.confirmPassword) {
-      alert("New Password and Confirm Password do not match.");
-      return;
-    }
+   // Default password
+   const savedPassword = localStorage.getItem("password") || "Admin@123";
 
-    alert("Password updated successfully!");
+   // Current password check
+   if (passwords.currentPassword !== savedPassword) {
+     alert("Current Password is incorrect.");
+     return;
+   }
 
-    setPasswords({
-      currentPassword: "",
-      newPassword: "",
-      confirmPassword: "",
-    });
-  };
+   // New password match check
+   if (passwords.newPassword !== passwords.confirmPassword) {
+     alert("New Password and Confirm Password do not match.");
+     return;
+   }
+
+   // Save new password
+   localStorage.setItem("password", passwords.newPassword);
+
+   alert("Password updated successfully!");
+
+   setPasswords({
+     currentPassword: "",
+     newPassword: "",
+     confirmPassword: "",
+   });
+ };
 
   return (
     <div className="bg-white rounded-xl shadow-md p-6">

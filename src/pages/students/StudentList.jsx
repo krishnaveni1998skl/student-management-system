@@ -15,7 +15,8 @@ function StudentList() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-
+  const [sortBy, setSortBy] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
   useEffect(() => {
     loadStudents();
   }, []);
@@ -46,20 +47,39 @@ function StudentList() {
 
     return matchSearch && matchDepartment && matchYear && matchStatus;
   });
+  // SORTING
+  const sortedStudents = [...filteredStudents].sort((a, b) => {
+    if (!sortBy) return 0;
 
+    let valueA = a[sortBy];
+    let valueB = b[sortBy];
+
+    // String values
+    if (typeof valueA === "string") {
+      valueA = valueA.toLowerCase();
+      valueB = valueB.toLowerCase();
+    }
+
+    if (valueA < valueB) {
+      return sortOrder === "asc" ? -1 : 1;
+    }
+
+    if (valueA > valueB) {
+      return sortOrder === "asc" ? 1 : -1;
+    }
+
+    return 0;
+  });
   // PAGINATION
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-  const currentStudents = filteredStudents.slice(
-    indexOfFirstItem,
-    indexOfLastItem,
-  );
-
+  
+const currentStudents = sortedStudents.slice(indexOfFirstItem, indexOfLastItem);
   // RESET PAGE WHEN FILTER CHANGES
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, department, year, status]);
+  }, [searchTerm, department, year, status, sortBy, sortOrder]);
 
   return (
     <MainLayout>
@@ -80,6 +100,10 @@ function StudentList() {
           setYear={setYear}
           status={status}
           setStatus={setStatus}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          sortOrder={sortOrder}
+          setSortOrder={setSortOrder}
         />
 
         {/* TABLE */}
@@ -89,7 +113,8 @@ function StudentList() {
         <Pagination
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
-          totalItems={filteredStudents.length}
+        
+          totalItems={sortedStudents.length}
           itemsPerPage={itemsPerPage}
         />
       </div>

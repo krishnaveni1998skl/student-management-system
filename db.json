@@ -2,25 +2,25 @@
   "students": [
     {
       "id": "1",
-      "studentId": "ST001",
-      "name": "Rahul Kumar",
-      "email": "rahul@gmail.com",
+      "studentId": "STU001",
+      "name": "Arun Kumar",
+      "email": "arun001@gmail.com",
       "phone": "9876543210",
       "gender": "Male",
-      "dob": "2003-05-15",
+      "dob": "2004-01-15",
       "department": "Computer Science",
-      "year": "III Year",
+      "year": "I Year",
       "address": "Chennai",
       "status": "Active"
     },
     {
       "id": "2",
-      "studentId": "ST002",
-      "name": "Priya",
-      "email": "priya@gmail.com",
+      "studentId": "STU002",
+      "name": "Priya Sharma",
+      "email": "priya002@gmail.com",
       "phone": "9876543211",
       "gender": "Female",
-      "dob": "2004-01-20",
+      "dob": "2003-05-10",
       "department": "Information Technology",
       "year": "II Year",
       "address": "Coimbatore",
@@ -28,76 +28,417 @@
     },
     {
       "id": "3",
-      "studentId": "ST003",
-      "name": "Arun",
-      "email": "arun@gmail.com",
+      "studentId": "STU003",
+      "name": "Rahul Singh",
+      "email": "rahul003@gmail.com",
       "phone": "9876543212",
       "gender": "Male",
-      "dob": "2002-11-08",
+      "dob": "2002-09-20",
       "department": "Mechanical",
-      "year": "IV Year",
+      "year": "III Year",
       "address": "Madurai",
       "status": "Inactive"
     },
     {
-      "studentId": "ST004",
-      "name": "Renu",
-      "email": "renu@gmail.com",
-      "phone": "9876540001",
+      "id": "4",
+      "studentId": "STU004",
+      "name": "Divya R",
+      "email": "divya004@gmail.com",
+      "phone": "9876543213",
       "gender": "Female",
-      "dob": "1999-05-02",
+      "dob": "2004-02-12",
       "department": "Computer Science",
       "year": "IV Year",
-      "address": "banglore",
-      "status": "Active",
-      "id": "_SQiPUjy_VM"
+      "address": "Salem",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "studentId": "STU005",
+      "name": "Karthik M",
+      "email": "karthik005@gmail.com",
+      "phone": "9876543214",
+      "gender": "Male",
+      "dob": "2003-07-18",
+      "department": "Mechanical",
+      "year": "II Year",
+      "address": "Erode",
+      "status": "Active"
+    },
+    {
+      "id": "6",
+      "studentId": "STU006",
+      "name": "Sneha P",
+      "email": "sneha006@gmail.com",
+      "phone": "9876543215",
+      "gender": "Female",
+      "dob": "2004-03-14",
+      "department": "Information Technology",
+      "year": "I Year",
+      "address": "Trichy",
+      "status": "Active"
+    },
+    {
+      "id": "7",
+      "studentId": "STU007",
+      "name": "Vignesh K",
+      "email": "vignesh007@gmail.com",
+      "phone": "9876543216",
+      "gender": "Male",
+      "dob": "2002-11-09",
+      "department": "Computer Science",
+      "year": "III Year",
+      "address": "Chennai",
+      "status": "Inactive"
+    },
+    {
+      "id": "8",
+      "studentId": "STU008",
+      "name": "Nandhini S",
+      "email": "nandhini008@gmail.com",
+      "phone": "9876543217",
+      "gender": "Female",
+      "dob": "2004-08-25",
+      "department": "Mechanical",
+      "year": "I Year",
+      "address": "Vellore",
+      "status": "Active"
+    },
+    {
+      "id": "9",
+      "studentId": "STU009",
+      "name": "Ajith Kumar",
+      "email": "ajith009@gmail.com",
+      "phone": "9876543218",
+      "gender": "Male",
+      "dob": "2003-06-17",
+      "department": "Information Technology",
+      "year": "IV Year",
+      "address": "Tirunelveli",
+      "status": "Active"
+    },
+    {
+      "id": "10",
+      "studentId": "STU010",
+      "name": "Keerthana R",
+      "email": "keerthana010@gmail.com",
+      "phone": "9876543219",
+      "gender": "Female",
+      "dob": "2002-04-30",
+      "department": "Computer Science",
+      "year": "II Year",
+      "address": "Thanjavur",
+      "status": "Inactive"
+    },
+    {
+      "id": "11",
+      "studentId": "STU011",
+      "name": "Hari Prasad",
+      "email": "hari011@gmail.com",
+      "phone": "9876543220",
+      "gender": "Male",
+      "dob": "2004-01-11",
+      "department": "Computer Science",
+      "year": "I Year",
+      "address": "Chennai",
+      "status": "Active"
+    },
+    {
+      "id": "12",
+      "studentId": "STU012",
+      "name": "Anitha S",
+      "email": "anitha012@gmail.com",
+      "phone": "9876543221",
+      "gender": "Female",
+      "dob": "2003-09-09",
+      "department": "Mechanical",
+      "year": "II Year",
+      "address": "Madurai",
+      "status": "Active"
+    },
+    {
+      "id": "13",
+      "studentId": "STU013",
+      "name": "Ramesh B",
+      "email": "ramesh013@gmail.com",
+      "phone": "9876543222",
+      "gender": "Male",
+      "dob": "2002-02-21",
+      "department": "Information Technology",
+      "year": "III Year",
+      "address": "Erode",
+      "status": "Inactive"
+    },
+    {
+      "id": "14",
+      "studentId": "STU014",
+      "name": "Lavanya M",
+      "email": "lavanya014@gmail.com",
+      "phone": "9876543223",
+      "gender": "Female",
+      "dob": "2004-07-07",
+      "department": "Computer Science",
+      "year": "IV Year",
+      "address": "Salem",
+      "status": "Active"
+    },
+    {
+      "id": "15",
+      "studentId": "STU015",
+      "name": "Sathish Kumar",
+      "email": "sathish015@gmail.com",
+      "phone": "9876543224",
+      "gender": "Male",
+      "dob": "2003-12-12",
+      "department": "Mechanical",
+      "year": "I Year",
+      "address": "Trichy",
+      "status": "Active"
     }
   ],
   "attendance": [
     {
       "id": "1",
       "studentId": "ST001",
-      "name": "Rahul Kumar",
-      "department": "Computer Science",
-      "date": "2026-07-04",
+      "name": "Arun Kumar",
+      "date": "2026-07-01",
       "status": "Present"
     },
     {
       "id": "2",
       "studentId": "ST002",
-      "name": "Priya",
-      "department": "Information Technology",
-      "date": "2026-07-04",
+      "name": "Priya Sharma",
+      "date": "2026-07-01",
       "status": "Absent"
     },
     {
       "id": "3",
       "studentId": "ST003",
-      "name": "Arun",
-      "department": "Mechanical",
-      "date": "2026-07-04",
+      "name": "Rahul Verma",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "4",
+      "studentId": "ST004",
+      "name": "Sneha Reddy",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "5",
+      "studentId": "ST005",
+      "name": "Vignesh Kumar",
+      "date": "2026-07-01",
+      "status": "Absent"
+    },
+    {
+      "id": "6",
+      "studentId": "ST006",
+      "name": "Divya Lakshmi",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "7",
+      "studentId": "ST007",
+      "name": "Karthik Raj",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "8",
+      "studentId": "ST008",
+      "name": "Anjali Devi",
+      "date": "2026-07-01",
+      "status": "Absent"
+    },
+    {
+      "id": "9",
+      "studentId": "ST009",
+      "name": "Naveen Kumar",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "10",
+      "studentId": "ST010",
+      "name": "Meena Priya",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "11",
+      "studentId": "ST011",
+      "name": "Sanjay Kumar",
+      "date": "2026-07-01",
+      "status": "Absent"
+    },
+    {
+      "id": "12",
+      "studentId": "ST012",
+      "name": "Keerthana",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "13",
+      "studentId": "ST013",
+      "name": "Ajith Kumar",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "14",
+      "studentId": "ST014",
+      "name": "Harini",
+      "date": "2026-07-01",
+      "status": "Absent"
+    },
+    {
+      "id": "15",
+      "studentId": "ST015",
+      "name": "Mohammed Asif",
+      "date": "2026-07-01",
       "status": "Present"
     }
   ],
   "progress": [
-    {
-      "id": "2",
-      "studentId": "ST002",
-      "name": "Priya",
-      "subject": "Java",
-      "semester": "Semester 1",
-      "marks": 76,
-      "grade": "B"
-    },
-    {
-      "id": "3",
-      "studentId": "ST003",
-      "name": "Arun",
-      "subject": "Database",
-      "semester": "Semester 1",
-      "marks": 92,
-      "grade": "A+"
-    }
-  ],
+  {
+    "id": "1",
+    "studentId": "STU001",
+    "name": "Arun Kumar",
+    "subject": "Java",
+    "semester": "Semester 1",
+    "marks": 92,
+    "grade": "A+"
+  },
+  {
+    "id": "2",
+    "studentId": "STU002",
+    "name": "Priya Sharma",
+    "subject": "Python",
+    "semester": "Semester 1",
+    "marks": 85,
+    "grade": "A"
+  },
+  {
+    "id": "3",
+    "studentId": "STU003",
+    "name": "Rahul Singh",
+    "subject": "Database",
+    "semester": "Semester 2",
+    "marks": 76,
+    "grade": "B"
+  },
+  {
+    "id": "4",
+    "studentId": "STU004",
+    "name": "Divya R",
+    "subject": "C Programming",
+    "semester": "Semester 1",
+    "marks": 95,
+    "grade": "A+"
+  },
+  {
+    "id": "5",
+    "studentId": "STU005",
+    "name": "Karthik M",
+    "subject": "Operating System",
+    "semester": "Semester 2",
+    "marks": 71,
+    "grade": "B"
+  },
+  {
+    "id": "6",
+    "studentId": "STU006",
+    "name": "Sneha P",
+    "subject": "Python",
+    "semester": "Semester 1",
+    "marks": 88,
+    "grade": "A"
+  },
+  {
+    "id": "7",
+    "studentId": "STU007",
+    "name": "Vignesh K",
+    "subject": "Java",
+    "semester": "Semester 3",
+    "marks": 68,
+    "grade": "C"
+  },
+  {
+    "id": "8",
+    "studentId": "STU008",
+    "name": "Nandhini S",
+    "subject": "Machine Learning",
+    "semester": "Semester 1",
+    "marks": 91,
+    "grade": "A+"
+  },
+  {
+    "id": "9",
+    "studentId": "STU009",
+    "name": "Ajith Kumar",
+    "subject": "Computer Networks",
+    "semester": "Semester 4",
+    "marks": 79,
+    "grade": "B+"
+  },
+  {
+    "id": "10",
+    "studentId": "STU010",
+    "name": "Keerthana R",
+    "subject": "Software Engineering",
+    "semester": "Semester 2",
+    "marks": 83,
+    "grade": "A"
+  },
+  {
+    "id": "11",
+    "studentId": "STU011",
+    "name": "Hari Prasad",
+    "subject": "Data Structures",
+    "semester": "Semester 1",
+    "marks": 89,
+    "grade": "A"
+  },
+  {
+    "id": "12",
+    "studentId": "STU012",
+    "name": "Anitha S",
+    "subject": "Python",
+    "semester": "Semester 2",
+    "marks": 74,
+    "grade": "B"
+  },
+  {
+    "id": "13",
+    "studentId": "STU013",
+    "name": "Ramesh B",
+    "subject": "Cloud Computing",
+    "semester": "Semester 3",
+    "marks": 81,
+    "grade": "A"
+  },
+  {
+    "id": "14",
+    "studentId": "STU014",
+    "name": "Lavanya M",
+    "subject": "Artificial Intelligence",
+    "semester": "Semester 4",
+    "marks": 94,
+    "grade": "A+"
+  },
+  {
+    "id": "15",
+    "studentId": "STU015",
+    "name": "Sathish Kumar",
+    "subject": "Database",
+    "semester": "Semester 1",
+    "marks": 77,
+    "grade": "B+"
+  }
+],
   "$schema": "./node_modules/json-server/schema.json"
 }

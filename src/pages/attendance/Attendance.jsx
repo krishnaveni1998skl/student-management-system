@@ -90,9 +90,9 @@ function Attendance() {
 
         <Pagination
           currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
           totalItems={filteredAttendance.length}
           itemsPerPage={recordsPerPage}
-          onPageChange={setCurrentPage}
         />
       </div>
     </MainLayout>
